@@ -22,140 +22,441 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>
-					Beautiful presentations
-				</h1>
-				<h2>New features</h2>
-				<ul>
-					<li>Nerd icons </li>
-					<li><code class="js">(inline) => code("highlighting")</code></li>
-					<li>Automatic QR Code generation</li>
-					<li>and much more!</li>
-				</ul>
-			</section>
-			<section>
-				<h1>
-					Custom TokyoNight theme
-				</h1>
-				<h2 class="fragment">That has</h2>
-				<h3 class="fragment">Multi</h3>
-				<h4 class="fragment">Level</h4>
-				<h5 class="fragment">Heading</h5>
-				<h6 class="fragment">Coloring</h6>
-				<h6>Thanks to this project <a href="https://github.com/tcmmichaelb139/obsidian-tokyonight"></a> for the
-					colorscheme!</h6>
+				<h1>Методы нормальных форм</h1>
+				<img alt="https://ktkv-presentations.github.io/db-6/" data-type="qrcode">
 			</section>
 			<section>
 				<section>
-					<h1>Tailwind CSS</h1>
-					<div class="grid grid-cols-2 gap-8">
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+					<h1>
+						Проблемы чрезмерной нормализации
+					</h1>
+					<img src="https://preview.redd.it/03bputwl8vr21.jpg?auto=webp&s=2c2acfc1fcab06c38b5aa08a067ce6ae1b496022"
+						alt="" class="r-stretch">
+				</section>
+				<section>
+					<h1>Нормальная форма Бойса-Кодда (НФБК/BCNF)</h1>
+					<p>расширение третьей нормальной формы, где каждый детерминант (атрибут, от которого функционально зависят
+						другие атрибуты) должен быть ключевым значением таблицы</p>
+				</section>
+				<section>
+					<table>
+						<tr>
+							<th>Преподаватель</th>
+							<th>Курс</th>
+							<th>Аудитория</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Математика</th>
+							<th>А101</th>
+						</tr>
+						<tr>
+							<th>Петров</th>
+							<th>Программирование</th>
+							<th>А102</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Физика</th>
+							<th>А101</th>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<div class="border-b">
+						<h4>Таблица Преподаватели</h4>
+						<table>
+							<tr>
+								<th>Преподаватель </th>
+								<th>Аудитория</th>
+							</tr>
+							<tr>
+								<th>Петров</th>
+								<th>А101</th>
+							</tr>
+							<tr>
+								<th>Иванов</th>
+								<th>А102</th>
+							</tr>
+						</table>
+					</div><br>
+					<div class="border-b">
+						<h4>Таблица Курсы</h4>
+						<table>
+							<tr>
+								<th>Преподаватель </th>
+								<th>Курс</th>
+							</tr>
+							<tr>
+								<th>Иванов</th>
+								<th>Математика</th>
+							</tr>
+							<tr>
+								<th>Иванов</th>
+								<th>Физика</th>
+							</tr>
+							<tr>
+								<th>Петров</th>
+								<th>Программирование</th>
+							</tr>
+						</table>
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Многозначная зависимость (MVD)</h1>
+					<p>особый тип зависимости, который возникает, когда один атрибут таблицы определяет несколько значений другого
+						атрибута независимо от всех остальных атрибутов</p>
+				</section>
+				<section>
+					<h1>Четвёртая нормальная форма</h1>
+					<p>нормальная форма, которая устраняет избыточность данных, вызванную многозначными зависимостями</p>
+				</section>
+				<section>
+					<table>
+						<tr>
+							<th>Студент</th>
+							<th>Курс</th>
+							<th>Хобби</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Математика</th>
+							<th>Футбол</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Программирование</th>
+							<th>Футбол</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Математика</th>
+							<th>Музыка</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Программирование</th>
+							<th>Музыка</th>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<div class="border-b">
+						<h4>Таблица Курсы</h4>
+						<table>
+							<tr>
+								<th>Студент</th>
+								<th>Курс</th>
+							</tr>
+							<tr>
+								<th>Иванов</th>
+								<th>Математика</th>
+							</tr>
+							<tr>
+								<th>Иванов</th>
+								<th>Программирование</th>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<div class="border-b">
+						<h4>Таблица Хобби</h4>
+						<table>
+							<tr>
+								<th>Студент</th>
+								<th>Хобби</th>
+							</tr>
+							<tr>
+								<th>Иванов</th>
+								<th>Футбол</th>
+							</tr>
+							<tr>
+								<th>Иванов</th>
+								<th>Музыка</th>
+							</tr>
+						</table>
+					</div>
+				</section>
+				<section>
+					<h1>Когда использовать 4НФ</h1>
+					<p>когда требуется хранить множественные независимые множества данных для одной и той же сущности</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Зависимость соединения (JD)</h1>
+					<p>зависимость, при которой таблица может быть восстановлена путём соединения нескольких её проекций (частей
+						данных), но при этом эти проекции не могут быть разделены на более мелкие без потери информации</p>
+				</section>
+				<section>
+					<h1>Пятая нормальная форма</h1>
+					<p>нормальная форма, которая устраняет зависимости соединения</p>
+				</section>
+				<section>
+					<table>
+						<tr>
+							<th>Покупатель</th>
+							<th>Продавец</th>
+							<th>Товар</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Петров</th>
+							<th>Компьютер</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Сидоров</th>
+							<th>Принтер</th>
+						</tr>
+						<tr>
+							<th>Сидоров</th>
+							<th>Петров</th>
+							<th>Принтер</th>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="border-b">
+							<h4>Таблица продавцы и товары</h4>
+							<table>
+								<tr>
+									<th>Продавец</th>
+									<th>Товар</th>
+								</tr>
+								<tr>
+									<th>Петров</th>
+									<th>Компьютер</th>
+								</tr>
+								<tr>
+									<th>Сидоров</th>
+									<th>Принтер</th>
+								</tr>
+							</table>
 						</div>
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+						<div class="border-b">
+							<h4>Таблица покупатели и товары</h4>
+							<table>
+								<tr>
+									<th>Покупатель</th>
+									<th>Товар</th>
+								</tr>
+								<tr>
+									<th>Иванов</th>
+									<th>Компьютер</th>
+								</tr>
+								<tr>
+									<th>Иванов</th>
+									<th>Принтер</th>
+								</tr>
+							</table>
 						</div>
-						<div class="col-span-2">
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
+						<div class="border-b col-span-2">
+							<h4>Таблица Покупатели и продавцы</h4>
+							<table>
+								<tr>
+									<th>Покупатель</th>
+									<th>Продавец</th>
+								</tr>
+								<tr>
+									<th>Иванов</th>
+									<th>Петров</th>
+								</tr>
+								<tr>
+									<th>Иванов</th>
+									<th>Сидоров</th>
+								</tr>
+								<tr>
+									<th>Сидоров</th>
+									<th>Петров</th>
+								</tr>
+							</table>
 						</div>
 					</div>
 				</section>
 				<section>
-					<h1>Custom classes</h1>
-					<div class="grid grid-cols-3 gap-8">
-						<div class="border-r">
-							<h5>border-r</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
+					<h1>Когда использовать 5НФ</h1>
+					<p>когда необходимо моделировать сложные отношения между несколькими сущностями</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Доменно-ключевая нормальная форма (DKNF)</h1>
+					<p>высшая нормальная форма, которая требует, чтобы каждый ограничивающий фактор или зависимость в таблице были
+						выражены через ограничения домена или ключа</p>
+				</section>
+				<section>
+					<h1>Пример нарушения ДКНФ</h1>
+					<pre><code class="sql">
+CREATE TABLE student_grades (
+		student_id INT NOT NULL,
+		course_id INT NOT NULL,
+		grade INT NOT NULL
+    PRIMARY KEY (student_id, course_id),
+);
+				</code></pre>
+					<table>
+						<tr>
+							<th>Студент</th>
+							<th>Курс</th>
+							<th>Оценка</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Математика</th>
+							<th>5</th>
+						</tr>
+						<tr>
+							<th>Петров</th>
+							<th>Программирование</th>
+							<th>4</th>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<pre><code class="sql">
+CREATE TABLE student_grades (
+		student_id INT NOT NULL,
+		course_id INT NOT NULL,
+		grade INT NOT NULL,
+    PRIMARY KEY (student_id, course_id),
+		    
+    CHECK (grade >= 1 AND grade <= 5),
+);
+				</code></pre>
+					<table>
+						<tr>
+							<th>Студент</th>
+							<th>Курс</th>
+							<th>Оценка</th>
+						</tr>
+						<tr>
+							<th>Иванов</th>
+							<th>Математика</th>
+							<th>5</th>
+						</tr>
+						<tr>
+							<th>Петров</th>
+							<th>Программирование</th>
+							<th>4</th>
+						</tr>
+					</table>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Денормализация</h1>
+					<p>процесс обратный нормализации, когда данные в базе данных умышленно дублируются, чтобы повысить
+						производительность системы</p>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="border-b">
+							<h4>Преимущества</h4>
+							<ul>
+								<li>Улучшение производительности</li>
+								<li>Упрощение запросов</li>
+								<li>Снижение нагрузки на сервер</li>
+							</ul>
 						</div>
-						<div class="border-o">
-							<h5>border-o</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-y">
-							<h5>border-y</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
+						<div class="border-b">
+							<h4>Недостатки</h4>
+							<ul>
+								<li>Избыточность данных</li>
+								<li>Аномалии обновления</li>
+								<li>Усложнение логики бизнес-правил</li>
+							</ul>
 						</div>
 					</div>
 				</section>
-			</section>
-			<section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<div>
-						Now also has Tokyo Night <code>highlight.js</code> highlighting implementation
+				<section>
+					<h1>Когда используется</h1>
+					<p>используется в системах, где чтение данных происходит гораздо чаще, чем запись, и требования к
+						производительности выше, чем к поддержанию строгой структуры данных</p>
+					<code>Например, в системах аналитики или хранилищах данных</code>
+				</section>
+				<section>
+					<div class="border-b">
+						<table>
+							<tr>
+								<th>customer_id </th>
+								<th>customer_name</th>
+								<th>city</th>
+							</tr>
+							<tr>
+								<th>1</th>
+								<th>Иванов</th>
+								<th>Москва</th>
+							</tr>
+							<tr>
+								<th>2</th>
+								<th>Петров</th>
+								<th>СПб</th>
+							</tr>
+						</table>
 					</div>
-					<pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
+					<br>
+					<div class="border-b">
+						<table>
+							<tr>
+								<th>order_id </th>
+								<th>customer_id</th>
+								<th>order_date</th>
+							</tr>
+							<tr>
+								<th>101</th>
+								<th>1</th>
+								<th>2024-09-01</th>
+							</tr>
+							<tr>
+								<th>102</th>
+								<th>2</th>
+								<th>2024-09-02</th>
+							</tr>
+						</table>
+					</div>
 				</section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<h5>Inline code highlighting is now also supported!</h5>
-					<p>
-						Just wrap your code with <code>&lt;code&gt;</code> tag and get
-						highlighting like this <code class="js">const foo = () => {return bar}</code>!
-					</p>
+				<section>
+					<table>
+						<tr>
+							<th>order_id </th>
+							<th>customer_id</th>
+							<th>customer_name</th>
+							<th>city</th>
+							<th>order_date</th>
+						</tr>
+						<tr>
+							<th>101</th>
+							<th>1</th>
+							<th>Иванов</th>
+							<th>Москва</th>
+							<th>2024-09-01</th>
+						</tr>
+						<tr>
+							<th>102</th>
+							<th>2</th>
+							<th>Петров</th>
+							<th>СПб</th>
+							<th>2023-09-02</th>
+						</tr>
+					</table>
 				</section>
-			</section>
-			<section>
-				<h1>Mermaid for beautiful diagrams!</h1>
-				<div class="mermaid">
-					<pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre>
-				</div>
-				<h4>Check documentation <a href="https://mermaid.js.org/config/usage.html">here</a>!</h4>
-			</section>
-			<section>
-				<h1>Now supports Nerd font icons!</h1>
-				<div>Nerdy project that adds icons to font itself</div>
-				<h6>Checkout their site for icons like this <a href="https://www.nerdfonts.com/">󰖟</a>!
-				</h6>
-			</section>
-			<section>
-				<h1>Now supports automatic QRCode generation!</h1>
-				<div>With GoQR you can just add data-type and alt attributes to your <code
-						class="html">&lt;img alt="https://goqr.me/" data-type="qrcode" / &gt;</code> tag!</div>
-				<img class="r-stretch" alt="https://goqr.me/" data-type="qrcode" />
-				</h6>
-			</section>
-			<section>
-				<h1>New changes on the way!</h1>
+				<section>
+					<h1>Варианты денормализации</h1>
+					<ul>
+						<li>Добавление избыточных столбцов</li>
+						<li>Предвычисленные агрегаты</li>
+						<li>Кэширование данных</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Во всем должен быть баланс</h1>
+					<img src="https://www.meme-arsenal.com/memes/812145c2c54e73335353c9b9531bd5e1.jpg" alt="" class="r-stretch">
+				</section>
 			</section>
 		</div>
 	</div>
-
 	<script src="dist/reveal.js"></script>
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
